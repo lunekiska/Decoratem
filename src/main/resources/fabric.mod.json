@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "decoratus",
+  "version": "${version}",
+
+  "name": "Decoratus",
+  "description": "Minecraft mod that adds some fancy decoration to the game",
+  "authors": [
+    "Luney(vooki)!"
+  ],
+  "contact": {
+    "homepage": "https://leafinpr.carrd.co",
+    "sources": "https://github.com/Vooki/Decoratus"
+  },
+
+  "license": "CC0-1.0",
+  "icon": "assets/decoratus/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.vooki.decoratus.DecoratusMod"
+    ]
+  },
+  "mixins": [
+    "decoratus.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.8",
+    "fabric": "*",
+    "minecraft": "20w06a"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "package": "io.github.vooki.decoratus.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+  ],
+  "client": [
+    "ClientMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
