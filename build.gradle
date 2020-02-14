@@ -1,7 +1,9 @@
 plugins {
-	id 'fabric-loom' version '0.2.7-SNAPSHOT'
+	id 'java'
+	id 'idea'
+	id 'fabric-loom' version '0.2.6-SNAPSHOT'
 	id 'maven-publish'
-	id 'com.matthewprenger.cursegradle' version "1.4.0"
+	id 'com.matthewprenger.cursegradle' version '1.4.0'
 }
 
 sourceCompatibility = JavaVersion.VERSION_1_8
@@ -15,15 +17,17 @@ minecraft {
 }
 
 repositories {
+	mavenLocal()
 	maven { url = "https://maven.fabricmc.net/" }
     maven { url = "https://minecraft.curseforge.com/api/maven/" }
 	maven { url = "https://maven.fabricmc.net/io/github/prospector/modmenu/ModMenu/" }
+	mavenCentral()
 }
 
 dependencies {
 	//to change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
-	mappings "net.fabricmc:yarn:${project.yarn_mappings}"
+	mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
 	modCompile "net.fabricmc:fabric-loader:${project.loader_version}"
 
 	// Fabric API. This is technically optional, but you probably want it anyway.
@@ -73,7 +77,7 @@ publishing {
 	publications {
 		mavenJava(MavenPublication) {
 			// add all the jars that should be included when publishing to maven
-			artifact(jar.archivePath) {
+			artifact(remapJar) {
 				builtBy remapJar
 			}
 			artifact(sourcesJar) {
