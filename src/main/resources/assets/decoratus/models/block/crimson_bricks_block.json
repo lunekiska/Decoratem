@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "decoratus:block/crimson_bricks_block"
+  }
+}

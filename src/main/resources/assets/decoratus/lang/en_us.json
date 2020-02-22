@@ -1,5 +1,9 @@
 {
   "item.decoratus.basalt_brick": "Basalt Brick",
 
-  "itemGroup.decoratus.decoratus_items": "Decoratus Items"
+  "block.decoratus.warped_bricks_block": "Warped Bricks",
+  "block.decoratus.crimson_bricks_block": "Crimson Bricks",
+
+  "itemGroup.decoratus.decoratus_items": "Decoratus Items",
+  "itemGroup.decoratus.decoratus_blocks": "Decoratus Blocks"
 }

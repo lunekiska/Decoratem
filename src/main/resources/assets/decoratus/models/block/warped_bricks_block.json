@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "decoratus:block/warped_bricks_block"
+  }
+}
